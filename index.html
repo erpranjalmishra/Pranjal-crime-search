@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crime Reporting Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a Color="Black" class="logo">labXsena</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Report Crime</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="map"></div>
+        <aside>
+            <h2>Filter Reports</h2>
+            <form id="filter-form">
+                <label for="type">Type of Crime</label>
+                <select id="type" name="type">
+                    <option value="all">All</option>
+                    <option value="theft">Theft</option>
+                    <option value="assault">Assault</option>
+                    <option value="vandalism">Vandalism</option>
+                </select>
+                <label for="date-range">Date Range</label>
+                <input type="date" id="start-date" name="start-date">
+                <input type="date" id="end-date" name="end-date">
+                <button type="submit">Apply Filters</button>
+            </form>
+        </aside>
+        <div id="report-form-container">
+            <h2>Report a Crime</h2>
+            <form id="report-form">
+                <label for="crime-type">Type of Crime</label>
+                <select id="crime-type" name="crime-type">
+                    <option value="theft">Theft</option>
+                    <option value="assault">Assault</option>
+                    <option value="vandalism">Vandalism</option>
+                </select>
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="4"></textarea>
+                <label for="media">Upload Media</label>
+                <input type="file" id="media" name="media" accept="image/*,video/*">
+                <button type="submit">Submit Report</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Chat Box -->
+    <div id="chat-container" class="hidden">
+        <div id="chat-box">
+            <div id="chat-header">
+                <span>Chat with Gemini</span>
+                <button id="close-chat">X</button>
+            </div>
+            <div id="chat-messages"></div>
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button id="send-chat">Send</button>
+        </div>
+    </div>
+    <button id="open-chat" class="show">Chat</button>
+
+    <!-- Import @google/generative-ai -->
+    <script type="importmap">
+    {
+        "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+    }
+    </script><script src="https://www.google.com/recaptcha/api.js?render=6Lc1QgQqAAAAAL97MbL1__51MKiXkzT478zh88lm"></script>
+    <script type="module" src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQQ_6U8lzyoC2TCiwc7ywM-CWZXeBQ0JI&callback=initMap" async defer></script>
+</body>
+</html>
