@@ -16,10 +16,7 @@ CrimeWatch is a web application for real-time crime reporting and visualization.
 
 ## Installation
 1. Clone the repo: `git clone https://github.com/erpranjalmishra/Pranjal-crime-search.git`
-2. Install dependencies: `npm install`
-3. Set up `.env` file with `PORT`, `MONGO_URI`, `GOOGLE_MAPS_API_KEY`, `SESSION_SECRET`
-4. Start the app: `npm start`
-5. Open `http://labXsena.com`
+2. Open `http://labXsena.com`
 
 ## Usage
 1. Register and login.
