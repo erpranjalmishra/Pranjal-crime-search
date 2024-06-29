@@ -23,5 +23,3 @@ CrimeWatch is a web application for real-time crime reporting and visualization.
 2. Report crimes.
 3. View and filter reports on the map.
 
-## License
-Licensed under the MIT License.
